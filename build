@@ -38,5 +38,7 @@ else
 fi
 
 progress "building"
+ls
+pwd
 buildctl-daemonless.sh build --frontend dockerfile.v0 --local context=$CONTEXT --local dockerfile=$DOCKERFILE --output type=oci,dest=image/image.tar
 # img build --no-console -s /scratch/state -t $REPOSITORY:$tag_name -f $DOCKERFILE $target_arg $build_args $CONTEXT
